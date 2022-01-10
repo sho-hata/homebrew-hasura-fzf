@@ -11,7 +11,7 @@ class HasuraFzf < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.0/hasura-fzf_0.1.0_darwin_x86_64.tar.gz"
-      sha256 "fff7f2abd8c9b261609c615db7c202fba0f9d9da749eee509f6736cc68152267"
+      sha256 "ffa5254fcbfc9a3c084e0ec6103ae97ca74dceab43345b82570e22250b857f30"
 
       def install
         bin.install "hasuraf"
@@ -19,7 +19,7 @@ class HasuraFzf < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.0/hasura-fzf_0.1.0_darwin_arm64.tar.gz"
-      sha256 "887cdb556dbf7c715ae62cdb486ec1163b432aa27b94b5a605d700e8994054bc"
+      sha256 "908e04b6d571b0ed76d861ec0c8046fd5e32e2e053cdd14f23d0854612a7b785"
 
       def install
         bin.install "hasuraf"
@@ -30,7 +30,7 @@ class HasuraFzf < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.0/hasura-fzf_0.1.0_linux_x86_64.tar.gz"
-      sha256 "a00ed7116f2f31ad946a17dbf91112e4c3da1235e1369062ed6b781dea08f4a7"
+      sha256 "5220501476398a5dc82f188a31335277d7552f16c153d9b8680ccc002b6ae318"
 
       def install
         bin.install "hasuraf"
@@ -38,7 +38,7 @@ class HasuraFzf < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.0/hasura-fzf_0.1.0_linux_arm64.tar.gz"
-      sha256 "3f0d2827f7aba8493db75fabbca374a311a73fc7963d95a30be2b43ff3665379"
+      sha256 "661a3190472ffbdc6ab9a9d67b7f6783f58174ab48205d665671ad5805d032e5"
 
       def install
         bin.install "hasuraf"
