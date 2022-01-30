@@ -5,21 +5,21 @@
 class HasuraFzf < Formula
   desc "This command has a fzf-like UI that allows you to find and run the file version used by the hasura cli command."
   homepage "https://github.com/sho-hata/hasura-fzf"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.6/hasura-fzf_0.1.6_darwin_x86_64.tar.gz"
-      sha256 "500cb4b04aa32b4c9c8ea38c862e91c141116f94578ef551b0883f0634cd9ac6"
+    if Hardware::CPU.arm?
+      url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.7/hasura-fzf_0.1.7_darwin_arm64.tar.gz"
+      sha256 "b83eeff6cce8a13ff5c518a7b05375128d2a861810610996aefb36330c436938"
 
       def install
         bin.install "hasuraf"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.6/hasura-fzf_0.1.6_darwin_arm64.tar.gz"
-      sha256 "4a5aa919bbe0c322d9e5ea2491599fc51ac35130437ea517ee0856de18040883"
+    if Hardware::CPU.intel?
+      url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.7/hasura-fzf_0.1.7_darwin_x86_64.tar.gz"
+      sha256 "975d7f51fa19b0f785f27469da16095d472534059b9bd61ef49718baf88bee67"
 
       def install
         bin.install "hasuraf"
@@ -29,16 +29,16 @@ class HasuraFzf < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.6/hasura-fzf_0.1.6_linux_x86_64.tar.gz"
-      sha256 "a71fc64d136b32574b018b6fde70df6d2fd96a606ee6cb4df35907063fdeee63"
+      url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.7/hasura-fzf_0.1.7_linux_x86_64.tar.gz"
+      sha256 "ba9676330f212bf0b91ae0953b12e7d5709b1a49506ce82bc193d6c13217934c"
 
       def install
         bin.install "hasuraf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.6/hasura-fzf_0.1.6_linux_arm64.tar.gz"
-      sha256 "245a42a7c1902800f6edf316dc100ce705c59bb89c0b892719fb417d5c14fc36"
+      url "https://github.com/sho-hata/hasura-fzf/releases/download/v0.1.7/hasura-fzf_0.1.7_linux_arm64.tar.gz"
+      sha256 "be68b72887e8dccc4c924666a546a54662788a73adcaa6b970b4828b09a4a9af"
 
       def install
         bin.install "hasuraf"
