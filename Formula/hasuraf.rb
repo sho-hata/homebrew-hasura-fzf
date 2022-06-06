@@ -5,21 +5,21 @@
 class Hasuraf < Formula
   desc "This command has a fzf-like UI that allows you to find and run the file version used by the hasura cli command."
   homepage "https://github.com/sho-hata/hasuraf"
-  version "0.1.9"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sho-hata/hasuraf/releases/download/v0.1.9/hasuraf_0.1.9_darwin_arm64.tar.gz"
-      sha256 "e7ab843596e8e643f999f9be352c51d756079612ea2ee2b79bfd6cf0ad01de15"
+      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.0/hasuraf_0.2.0_darwin_arm64.tar.gz"
+      sha256 "ea7da807c489fe96309a9e226ce3251ec40f8998510c7ddccffe753817128fc6"
 
       def install
         bin.install "hasuraf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sho-hata/hasuraf/releases/download/v0.1.9/hasuraf_0.1.9_darwin_x86_64.tar.gz"
-      sha256 "b3049c3ed2b6fcdeb0c268bd8bc5cf9e6e9afd84bee2bb74819f491503be44e9"
+      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.0/hasuraf_0.2.0_darwin_x86_64.tar.gz"
+      sha256 "43b1c871a7d19f921c0da96b534c817e43521c0d122d01cdbe4994a75c70aa28"
 
       def install
         bin.install "hasuraf"
@@ -28,17 +28,17 @@ class Hasuraf < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sho-hata/hasuraf/releases/download/v0.1.9/hasuraf_0.1.9_linux_arm64.tar.gz"
-      sha256 "d2b5d531fa0f418ce764e4caebf81af8a773924099cbc5e0260354952fe31bab"
+    if Hardware::CPU.intel?
+      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.0/hasuraf_0.2.0_linux_x86_64.tar.gz"
+      sha256 "4a9371108ff7d11984ceda49624e1603b1b30e01c6116eba09f8c6bc3b229ec6"
 
       def install
         bin.install "hasuraf"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sho-hata/hasuraf/releases/download/v0.1.9/hasuraf_0.1.9_linux_x86_64.tar.gz"
-      sha256 "864b291d77f07f20af6339dd770b278b1a717123c6f3b9293da79ce1fb89de22"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.0/hasuraf_0.2.0_linux_arm64.tar.gz"
+      sha256 "454ea5c347f7b6978e1383d1aa0c6c448bfedb9132078c520e0eda6076e9833d"
 
       def install
         bin.install "hasuraf"
