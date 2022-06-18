@@ -5,21 +5,21 @@
 class Hasuraf < Formula
   desc "This command has a fzf-like UI that allows you to find and run the file version used by the hasura cli command."
   homepage "https://github.com/sho-hata/hasuraf"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.0/hasuraf_0.2.0_darwin_arm64.tar.gz"
-      sha256 "ea7da807c489fe96309a9e226ce3251ec40f8998510c7ddccffe753817128fc6"
+      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.1/hasuraf_0.2.1_darwin_arm64.tar.gz"
+      sha256 "80e7a3f1ac8dc74ffdcbd7d1c839298f1ea4fcb2a4ac14e8106102ff660d62c8"
 
       def install
         bin.install "hasuraf"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.0/hasuraf_0.2.0_darwin_x86_64.tar.gz"
-      sha256 "43b1c871a7d19f921c0da96b534c817e43521c0d122d01cdbe4994a75c70aa28"
+      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.1/hasuraf_0.2.1_darwin_x86_64.tar.gz"
+      sha256 "9ca0e058f07c27f71afb7a26905c9dbded8dcf8fb2d4a50151adf2cbd6f7a1dd"
 
       def install
         bin.install "hasuraf"
@@ -29,16 +29,16 @@ class Hasuraf < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.0/hasuraf_0.2.0_linux_x86_64.tar.gz"
-      sha256 "4a9371108ff7d11984ceda49624e1603b1b30e01c6116eba09f8c6bc3b229ec6"
+      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.1/hasuraf_0.2.1_linux_x86_64.tar.gz"
+      sha256 "81560a83bc2e1cef9ce544cc9d10810e258e284b1893873c851b9d4bd9d644ef"
 
       def install
         bin.install "hasuraf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.0/hasuraf_0.2.0_linux_arm64.tar.gz"
-      sha256 "454ea5c347f7b6978e1383d1aa0c6c448bfedb9132078c520e0eda6076e9833d"
+      url "https://github.com/sho-hata/hasuraf/releases/download/v0.2.1/hasuraf_0.2.1_linux_arm64.tar.gz"
+      sha256 "185af965d9c1db569df68f3de20441fe41562722e938433b3d15d6280fd3b2ae"
 
       def install
         bin.install "hasuraf"
